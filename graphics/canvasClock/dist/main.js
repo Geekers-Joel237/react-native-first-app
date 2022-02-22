@@ -2,12 +2,15 @@
 //part2: draw a clock face
 //part3: draw clock numbers
 //part4: draw clock hands
+//part5: start the clock
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext("2d");
 var radius = canvas.height / 2;
 ctx.translate(radius,radius);
 radius = radius * 0.90
-drawClock();
+//start the clock
+// drawClock();
+setInterval(drawClock,1000);
 
 function drawClock() {
     drawFace(ctx,radius);
